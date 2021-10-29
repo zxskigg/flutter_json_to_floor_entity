@@ -219,7 +219,7 @@ class Employee {
 ### Create a DAO (Data Access Object)  
 This component is responsible for managing access to the underlying SQLite database.
 Auto create a dao like this:
-```
+```dart
 import 'package:floor/floor.dart';
 
 
@@ -258,7 +258,7 @@ These files will not be deleted or updated after they are created.
 ###Create the Database
 It has to be an abstract class which extends FloorDatabase.
 Auto create a dao like this:
-```
+```dart
 // database.dart
 // required package imports
 import 'dart:async';
