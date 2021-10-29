@@ -25,10 +25,12 @@ _based of the [json_to_model v2.3.1](https://pub.dev/packages/json_to_model)_
 | copyWith generation       |       ✅ |
 | clone and deepclone       |       ✅ |
 | nested json classes       |       ✅ |
+| alter tables and field    |       ❌ |
 | INTEGER(int) support      |       ✅ |
 | REAL(num) support         |       ✅ |
 | TEXT(String) support      |       ✅ |
 | BLOB(Uint8List) support   |       ✅ |
+
 
 ## Installation
 
@@ -231,6 +233,8 @@ abstract class PersonDao {
   Future<void> insertPerson(Person person);
 }
 ```
+These files will not be deleted or updated after they are created.
+
 
 ###Create the Database
 It has to be an abstract class which extends FloorDatabase.
