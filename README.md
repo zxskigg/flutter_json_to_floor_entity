@@ -221,16 +221,35 @@ This component is responsible for managing access to the underlying SQLite datab
 Auto create a dao like this:
 ```
 import 'package:floor/floor.dart';
-@dao
-abstract class PersonDao {
-  @Query('SELECT * FROM Person')
-  Future<List<Person>> findAllPersons();
 
-  @Query('SELECT * FROM Person WHERE id = :id')
-  Stream<Person?> findPersonById(int id);
+
+@dao
+abstract class NewsDao {
+
+  @Query('SELECT * FROM News')
+  Future<List<News>> findAll();
+
+  @Query('SELECT * FROM News WHERE id = :id')
+  Future<News?> findById(int id);
 
   @insert
-  Future<void> insertPerson(Person person);
+  Future<void> add(News entity);
+  
+  @insert
+  Future<void> addList(List<News> entities);
+
+  @update
+  Future<void> edit(News entity);
+
+  @update
+  Future<void> editList(List<News> entities);
+
+  @delete
+  Future<void> remove(News entity);
+
+  @delete
+  Future<void> removeList(List<News> entities);
+
 }
 ```
 These files will not be deleted or updated after they are created.
