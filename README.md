@@ -286,7 +286,7 @@ abstract class AppDatabase extends FloorDatabase {
    or  
    `pub run json_to_floor_entity -s assets/api_jsons -o lib/models`  
    or  
-   `flutter pub run json_to_floor_entity -s assets/api_jsons -o lib/models -d lib/dao`  
+   `flutter pub run json_to_floor_entity -s assets/api_jsons -o lib/models`  
    in flutter project
 4. run  
     `flutter packages pub run build_runner build`

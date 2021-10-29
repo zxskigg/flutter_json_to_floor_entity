@@ -12,13 +12,12 @@ import 'package:sqflite/sqflite.dart' as sqflite;
 
 for(var dao in daoList){
 classNameList.add(dao.toTitleCase());
-template += '''
-import '$dao.dao.dart';
-''';
 }
 
     template += '''
-    
+import 'index.dart';
+import '../models/index.dart';
+
 part 'database.g.dart'; 
 
 @Database(version: 1, entities: $classNameList)

@@ -9,20 +9,19 @@ import 'core/dao_template.dart';
 import 'core/database_template.dart';
 
 class JsonModelRunner {
-  String srcDir = './jsons/';
-  String distDir = './lib/models/';
-  String daoDir = './lib/dao/';
-  String? onlyFile = './lib/models/';
+  String srcDir = './jsons';
+  String distDir = './lib/models';
+  String daoDir = './lib/dao';
+  String? onlyFile = './lib/models';
   List<FileSystemEntity> list = [];
 
   JsonModelRunner({
     required String source,
     required String output,
-    required String dao,
     String? onlyFile,
   })   : srcDir = source,
         distDir = output,
-        daoDir = dao,
+        daoDir = output + '/../dao',
         onlyFile = onlyFile;
 
   void setup() {
@@ -101,7 +100,7 @@ class JsonModelRunner {
       }
     });
     if (indexFile.isNotEmpty) {
-      File(path.join(distDir, 'index.model.dart')).writeAsStringSync(indexFile);
+      File(path.join(distDir, 'index.dart')).writeAsStringSync(indexFile);
     }
     return indexFile.isNotEmpty;
   }
@@ -154,7 +153,7 @@ class JsonModelRunner {
       }
     });
     if (indexFile.isNotEmpty) {
-      File(path.join(daoDir, 'index.dao.dart')).writeAsStringSync(indexFile);
+      File(path.join(daoDir, 'index.dart')).writeAsStringSync(indexFile);
     }
     if (!generateFileFromJsonToDatabase(daoDir, daoList)) {
       error.write('cant write $daoDir/database.dart');

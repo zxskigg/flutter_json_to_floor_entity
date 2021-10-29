@@ -4,11 +4,9 @@ import 'package:args/args.dart';
 void main(List<String> arguments) {
   const defaultSource = './jsons/';
   const defaultOutput = './lib/models/';
-  const defaultDao = './lib/dao/';
 
   String? source = '';
   String? output = '';
-  String? dao = '';
   String? onlyFile;
 
   var argParser = ArgParser();
@@ -27,13 +25,6 @@ void main(List<String> arguments) {
     help: 'Specify models directory',
   );
   argParser.addOption(
-    'dao',
-    abbr: 'd',
-    defaultsTo: defaultDao,
-    callback: (v) => dao = v,
-    help: 'Specify DAO directory',
-  );
-  argParser.addOption(
     'onlyFile',
     abbr: 'f',
     callback: (v) => onlyFile = v,
@@ -43,7 +34,6 @@ void main(List<String> arguments) {
   var runner = JsonModelRunner(
     source: source ?? defaultSource,
     output: output ?? defaultOutput,
-    dao: dao ?? defaultDao,
     onlyFile: onlyFile,
   );
 
