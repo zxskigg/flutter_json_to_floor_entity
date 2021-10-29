@@ -263,11 +263,11 @@ abstract class AppDatabase extends FloorDatabase {
 1. Create a directory `jsons`(default) at root of your project
 2. Put all or Create json files inside `jsons` directory
 3. run  
-   `pub run json_to_floor_model`.  
+   `pub run json_to_floor_model`  
    or  
-   `pub run json_to_floor_model -s assets/api_jsons -o lib/models`.  
+   `pub run json_to_floor_model -s assets/api_jsons -o lib/models`  
    or  
-   `flutter pub run json_to_floor_model -s assets/api_jsons -o lib/models`.  
+   `flutter pub run json_to_floor_model -s assets/api_jsons -o lib/models`  
    in flutter project
 4. run  
     `flutter packages pub run build_runner build`
