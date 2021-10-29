@@ -1,7 +1,7 @@
 name: json_to_floor_entity
-description: Generate model class from Json file.
+description: Generate Floor (a flutter plugin provides a neat SQLite abstraction like Room) entities class and DAO class from Json file.
 version: 1.0.0
-homepage: https://github.com/fadhilx/json_to_model
+homepage: https://github.com/zxskigg/flutter_json_to_floor_entity
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
