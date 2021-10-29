@@ -1,5 +1,5 @@
-import 'package:json_to_model/core/dart_declaration.dart';
-import 'package:json_to_model/core/model_template.dart';
+import 'package:json_to_floor_entity/core/dart_declaration.dart';
+import 'package:json_to_floor_entity/core/model_template.dart';
 
 extension StringExtension on String {
   String toTitleCase() {

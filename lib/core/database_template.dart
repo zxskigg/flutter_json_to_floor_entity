@@ -1,4 +1,4 @@
-import 'package:json_to_model/utils/extensions.dart';
+import 'package:json_to_floor_entity/utils/extensions.dart';
 
 class DatabaseTemplates {
   static List<String> classNameList = [];

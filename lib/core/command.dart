@@ -1,4 +1,4 @@
-import 'package:json_to_model/core/json_model.dart';
+import 'package:json_to_floor_entity/core/json_model.dart';
 
 import 'dart_declaration.dart';
 import '../utils/extensions.dart';
