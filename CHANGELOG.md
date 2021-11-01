@@ -1,4 +1,4 @@
-## 1.0.0
+## 1.0.1
 
 - Remove DAO output directory, It is adjacent to the model now.
 

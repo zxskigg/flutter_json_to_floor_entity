@@ -38,7 +38,7 @@ on `pubspec.yaml`
 
 ```yaml
 dev_dependencies:
-  json_to_floor_model: last version
+  json_to_floor_entity: last version
 ```
 
 install using `pub get` command or if you using dart vscode/android studio, you can use install option.
