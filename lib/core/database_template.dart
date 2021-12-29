@@ -6,7 +6,6 @@ class DatabaseTemplates {
     var template = '''
 import 'dart:async';
 import 'package:floor/floor.dart';
-
 ''';
 if(null == cipher || 'false' == cipher){
 template += '''
