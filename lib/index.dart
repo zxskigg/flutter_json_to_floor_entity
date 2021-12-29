@@ -13,16 +13,20 @@ class JsonModelRunner {
   String distDir = './lib/models';
   String daoDir = './lib/dao';
   String? onlyFile = './lib/models';
+  String? cipher = 'false';
   List<FileSystemEntity> list = [];
 
   JsonModelRunner({
     required String source,
     required String output,
+    String? daoDir,
     String? onlyFile,
+    String? cipher,
   })   : srcDir = source,
         distDir = output,
         daoDir = output + '/../dao',
-        onlyFile = onlyFile;
+        onlyFile = onlyFile,
+        cipher = cipher;
 
   void setup() {
     if (srcDir.endsWith('/')) srcDir = srcDir.substring(0, srcDir.length - 1);
@@ -188,7 +192,7 @@ class JsonModelRunner {
       File(outputPath)
         ..createSync(recursive: true)
         ..writeAsStringSync(
-          DatabaseTemplates.fromStringList(daoList),
+          DatabaseTemplates.fromStringList(daoList, cipher:cipher),
         );
     } catch (e) {
       print(e);

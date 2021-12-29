@@ -2,13 +2,21 @@ import 'package:json_to_floor_entity/utils/extensions.dart';
 
 class DatabaseTemplates {
   static List<String> classNameList = [];
-  static String fromStringList(List<String> daoList) {
+  static String fromStringList(List<String> daoList, {String? cipher='false'}) {
     var template = '''
 import 'dart:async';
 import 'package:floor/floor.dart';
-import 'package:sqflite/sqflite.dart' as sqflite;
 
 ''';
+if(null == cipher || 'false' == cipher){
+template += '''
+import 'package:sqflite/sqflite.dart' as sqflite;
+''';
+}else{
+template += '''
+import 'package:sqflite_sqlcipher/sqflite.dart' as sqflite;
+''';
+}
 
 for(var dao in daoList){
 classNameList.add(dao.toTitleCase());
