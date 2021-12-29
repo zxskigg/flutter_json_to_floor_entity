@@ -84,7 +84,7 @@ class JsonModelRunner {
           var file = File(f.path);
           var dartPath = f.path.replaceFirst(srcDir, distDir).replaceFirst(
                 fileExtension,
-                '.model.dart',
+                '.dart',
                 f.path.length - fileExtension.length - 1,
               );
           List basenameString = path.basename(f.path).split('.');
