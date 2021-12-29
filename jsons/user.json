@@ -1,0 +1,12 @@
+{
+  "id?": 1,
+  "username?":"",
+  "password?": "",
+  "status?": 0,
+  "phone?":"",
+  "tags?": ["tag1","tag2"],
+  "lastLoginIp?": "127.0.0.1",
+  "lastLogin?": 1609925613,
+  "updateAt?":1609925613,
+  "createAt?": 1609925613
+}
