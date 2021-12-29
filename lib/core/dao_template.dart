@@ -45,7 +45,7 @@ class DAOTemplates {
     if (!isNested) {
       template += '''
 import 'package:floor/floor.dart';
-import '../models/$fileName.model.dart';
+import '../models/$fileName.dart';
 $imports
 
 ''';
