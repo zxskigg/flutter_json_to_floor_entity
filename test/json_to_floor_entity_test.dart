@@ -15,3 +15,6 @@ void main() {
     expect(result, expected);
   });
 }
+
+
+// usage : dart bin/json_to_floor_entity.dart -c true
